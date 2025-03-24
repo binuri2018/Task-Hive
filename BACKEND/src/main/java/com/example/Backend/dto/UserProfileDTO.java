@@ -1,3 +1,4 @@
+//User profile DTO
 package com.example.Backend.dto;
 
 import com.example.Backend.enums.RegistrationSource;
@@ -102,8 +103,8 @@ public class UserProfileDTO {
     public List<LearningGoal> getLearningGoals() {
         return learningGoals;
     }
-
+	
     public void setLearningGoals(List<LearningGoal> learningGoals) {
-        this.learningGoals = learningGoals;
+        this.learningGoals = learningGoals; 
     }
 }
