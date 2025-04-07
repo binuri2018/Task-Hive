@@ -41,4 +41,5 @@ const UserAvatar = ({ src, alt, name, size = "h-10 w-10", className = "" }) => {
   );
 };
 
+
 export default UserAvatar;
