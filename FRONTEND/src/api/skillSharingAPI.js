@@ -9,8 +9,8 @@ const createApiClient = (token) => {
       "Content-Type": "application/json",
       Authorization: token ? `Bearer ${token}` : "",
     },
-    //increase the default time out time since we are transfering images and video as base64
-    timeout: 60000, // 60 seconds
+    
+    timeout: 60000, 
   });
 
   return apiClient;
