@@ -1,4 +1,4 @@
-//learning plans API
+ //learning plans API
 import axios from "axios";
 
 // create axios instance with default config
