@@ -69,12 +69,20 @@ export const deleteLearningGoal = async (userId, goalId, token) => {
 };
 
 
-
-
-
-
-
-
+// Update learning goal progress
+export const updateLearningGoalProgress = async (userId, goalId, progressData, token) => {
+  const apiClient = createApiClient(token);
+  try {
+    const response = await apiClient.patch(
+      `/user/${userId}/learning-goals/${goalId}/progress`,
+      progressData
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error updating learning goal progress:", error);
+    throw error;
+  }
+};
 
 
 // Mark learning goal as complete/incomplete
