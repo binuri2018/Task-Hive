@@ -29,7 +29,7 @@ const SkillSharingFeed = () => {
     const {currentUser} = useAuth();
 
     useEffect(() => {
-        // fetch all posts when component mounts
+        
         fetchPosts();
     }, []);
 
@@ -57,7 +57,7 @@ const SkillSharingFeed = () => {
 
     const handleDeletePost = async (postId, isUpdate = false) => {
         if (isUpdate) {
-            // This is just a post update, refresh the feed
+            
             fetchPosts();
             return;
         }
@@ -106,7 +106,7 @@ const SkillSharingFeed = () => {
         );
 
         try {
-            // Make the API call after UI is already updated
+            
             if (isLiked) {
                 await removeLike(postId, currentUser.id, currentUser.token);
             } else {
