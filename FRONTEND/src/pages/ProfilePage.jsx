@@ -1042,7 +1042,7 @@ const ProfilePage = () => {
         </ProfileLayout>
     );
 };
-
+ 
 // Empty state component for when there's no content to display
 const EmptyState = ({icon, title, message}) => (
     <motion.div
