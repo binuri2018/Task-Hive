@@ -103,7 +103,7 @@ const CreatePostForm = ({ onPostCreated }) => {
               new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = () => {
-                  // Add metadata to identify file type
+                  
                   resolve({
                     dataUrl: reader.result,
                     type: file.type.startsWith("video/") ? "video" : "image",
@@ -115,10 +115,10 @@ const CreatePostForm = ({ onPostCreated }) => {
               })
       );
 
-      // Wait for all files to be converted
+      
       const mediaItems = await Promise.all(base64Promises);
 
-      // Clear previous preview URLs
+      
       previewUrls.forEach((url) => {
         if (url.startsWith("blob:")) {
           URL.revokeObjectURL(url);
@@ -183,11 +183,11 @@ const CreatePostForm = ({ onPostCreated }) => {
   };
 
   const removeFile = (index) => {
-    // Remove file at index
+    
     const newPreviewUrls = [...previewUrls];
     const newBase64Files = [...base64Files];
 
-    // Revoke URL object
+    
     if (previewUrls[index].startsWith("blob:")) {
       URL.revokeObjectURL(previewUrls[index]);
     }
